@@ -1,34 +1,371 @@
 <!DOCTYPE html>
 <html lang="am">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>የታሪክ ድረ-ገጽ</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; color: #333; }
-        header { background-color: #8B0000; color: white; padding: 30px 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { margin: 0; font-size: 2.5rem; }
-        .container { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 8px; }
-        p { line-height: 1.8; font-size: 1.1rem; text-align: justify; }
-        footer { text-align: center; padding: 20px; background-color: #333; color: white; position: relative; bottom: 0; width: 100%; margin-top: 40px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ታሪክ ትግራይ | Tigray History</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#111,#444);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+header h1{
+    font-size:42px;
+    margin:0 0 10px;
+}
+
+header p{
+    font-size:20px;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:#111;
+    text-align:center;
+    padding:15px 5px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ddd;
+}
+
+.hero{
+    min-height:430px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("tigray.jpg") center/cover;
+    color:white;
+}
+
+.hero h2{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 18px;
+}
+
+.section{
+    background:white;
+    margin:25px 0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px #ccc;
+}
+
+.section h2{
+    font-size:30px;
+    border-bottom:3px solid #222;
+    padding-bottom:10px;
+}
+
+.history-card{
+    border-left:5px solid #333;
+    padding:20px;
+    margin:25px 0;
+    background:#fafafa;
+}
+
+.history-card h3{
+    font-size:24px;
+    margin-top:0;
+}
+
+.history-card p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.places{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.place{
+    background:#eee;
+    padding:25px;
+    border-radius:12px;
+}
+
+.place h3{
+    font-size:22px;
+}
+
+.timeline{
+    position:relative;
+}
+
+.timeline-item{
+    background:#f5f5f5;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+}
+
+.timeline-item strong{
+    font-size:22px;
+}
+
+.sources{
+    line-height:2;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:32px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>የታሪክ ማኅደር</h1>
-    </header>
+<header>
+    <h1>ታሪክ ትግራይ</h1>
+    <p>TIGRAY HISTORY</p>
+    <p>ታሪክ • ቅርስ • ባህል • ትውልድ</p>
+</header>
 
-    <div class="container">
-        <h2>እንኳን ወደ ታሪክ ድረ-ገጽዎ በሰላም መጡ!</h2>
-        <p>ይህ ስለ ታሪክ የሚተርክ አዲሱ ድረ-ገጽዎ ነው። እዚህ ቦታ ላይ የተለያዩ ታሪካዊ ክስተቶችን፣ የነገሥታትን የሕይወት ታሪክ፣ ጥንታዊ ቅርሶችን እና ሌሎች ትረካዎችን በዝርዝር ማቅረብ ይችላሉ።</p>
-        <p>ይህንን ጽሑፍ በመቀየር መጻፍ የፈለጉትን እውነተኛ የታሪክ መረጃ ማስገባት ይችላሉ።</p>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#history">ታሪክ</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#places">ቦታዎች</a>
+    <a href="#culture">ባህል</a>
+    <a href="#sources">Sources</a>
+</nav>
+
+<section class="hero" id="home">
+    <div>
+        <h2>እንኳን ወደ ትግራይ ታሪክ በደህና መጡ</h2>
+        <p>
+            Discover the history, heritage and culture of Tigray.
+        </p>
     </div>
+</section>
 
-    <footer>
-        <p>© 2026 የታሪክ ድረ-ገጽ - መብቱ በሕግ የተጠበቀ ነው</p>
-    </footer>
+<div class="container">
+
+<section class="section" id="history">
+
+<h2>📜 የትግራይ ታሪክ</h2>
+
+<div class="history-card">
+<h3>🏺 1. ጥንታዊ ዘመን — የሐ</h3>
+
+<p>
+የሐ በሰሜን ኢትዮጵያ ከጥንታዊ ስልጣኔዎች
+ጋር የተያያዘ አስፈላጊ የአርኪዮሎጂ ቦታ ነው።
+የየሐ ታላቁ ቤተ መቅደስ ከ7ኛው ክፍለ ዘመን
+ዓ.ዓ. ጋር ይያያዛል።
+</p>
+
+<p>
+በየሐ የሚገኙት ቤተ መቅደሶች፣ ቤተ መንግስት
+እና መቃብሮች የጥንታዊ ማህበረሰቦችን የሕይወት
+እና የግንባታ ችሎታ ያሳያሉ።
+</p>
+</div>
+
+<div class="history-card">
+<h3>🏛️ 2. የአክሱም ስልጣኔ</h3>
+
+<p>
+አክሱም በጥንታዊ ዘመን ከአፍሪካ፣ ከአረብ እና
+ከግሪኮ-ሮማዊው ዓለም ጋር የንግድ ግንኙነት ያለው
+ኃያል መንግሥት ማዕከል ነበር።
+</p>
+
+<p>
+በአክሱም የሚገኙት ሐውልቶች፣ የነገሥታት መቃብሮች
+እና የጥንት ቤተ መንግሥቶች የአክሱምን ታሪካዊ
+አስፈላጊነት ያሳያሉ።
+</p>
+</div>
+
+<div class="history-card">
+<h3>✝️ 3. ክርስትና እና ቅርስ</h3>
+
+<p>
+በ4ኛው ክፍለ ዘመን ክርስትና በአክሱም መንግሥት
+ውስጥ ትልቅ ቦታ አገኘ። በትግራይም ብዙ ጥንታዊ
+አብያተ ክርስቲያናት፣ ገዳማት እና በድንጋይ የተቀረጹ
+ቤተ ክርስቲያናት ይገኛሉ።
+</p>
+</div>
+
+<div class="history-card">
+<h3>⚔️ 4. የአድዋ ጦርነት — 1896</h3>
+
+<p>
+የአድዋ ጦርነት በ1896 የተካሄደ ታላቅ ታሪካዊ
+ክስተት ነው። አድዋ በኢትዮጵያ እና በዓለም ታሪክ
+ውስጥ በጣም የሚታወቅ ቦታ ነው።
+</p>
+</div>
+
+<div class="history-card">
+<h3>🇮🇹 5. የጣሊያን ወረራ</h3>
+
+<p>
+የጣሊያን ወረራ ዘመን በኢትዮጵያ ዘመናዊ ታሪክ
+ውስጥ አስፈላጊ ምዕራፍ ነው። ይህ ዘመን በትግራይም
+በማህበራዊና በፖለቲካዊ ሕይወት ላይ ተፅዕኖ
+አሳድሯል።
+</p>
+</div>
+
+</section>
+
+<section class="section" id="timeline">
+
+<h2>⏳ Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>7ኛው ክፍለ ዘመን ዓ.ዓ.</strong>
+<p>የየሐ ታላቁ ቤተ መቅደስ የተገነባበት ጥንታዊ ዘመን።</p>
+</div>
+
+<div class="timeline-item">
+<strong>1ኛ–8ኛ ክፍለ ዘመን ዓ.ም.</strong>
+<p>የአክሱም ስልጣኔ የበለጸገበት ዘመን።</p>
+</div>
+
+<div class="timeline-item">
+<strong>4ኛ ክፍለ ዘመን</strong>
+<p>ክርስትና በአክሱም መንግሥት ውስጥ ትልቅ ቦታ አገኘ።</p>
+</div>
+
+<div class="timeline-item">
+<strong>1896</strong>
+<p>የአድዋ ጦርነት።</p>
+</div>
+
+<div class="timeline-item">
+<strong>1935–1941</strong>
+<p>የጣሊያን ወረራ ዘመን።</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="places">
+
+<h2>🏛️ ታሪካዊ ቦታዎች</h2>
+
+<div class="places">
+
+<div class="place">
+<h3>🏛️ አክሱም</h3>
+<p>የጥንታዊ አክሱም ስልጣኔ ዋና ማዕከል።</p>
+</div>
+
+<div class="place">
+<h3>🏺 የሐ</h3>
+<p>የጥንታዊ ስልጣኔ እና የአርኪዮሎጂ ቅርስ ቦታ።</p>
+</div>
+
+<div class="place">
+<h3>⚔️ አድዋ</h3>
+<p>የ1896 የአድዋ ጦርነት ታሪካዊ ቦታ።</p>
+</div>
+
+<div class="place">
+<h3>🏙️ መቐለ</h3>
+<p>የትግራይ ዋና ከተማ እና ዘመናዊ የባህል ማዕከል።</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="culture">
+
+<h2>🎭 ባህል እና ቅርስ</h2>
+
+<p>
+የትግራይ ባህል ቋንቋ፣ ሙዚቃ፣ የቤተ ክርስቲያን
+ቅርሶች፣ በዓላት፣ ባህላዊ ልብሶች እና የተለያዩ
+የማህበረሰብ ልማዶችን ያካትታል።
+</p>
+
+</section>
+
+<section class="section" id="sources">
+
+<h2>📚 Sources</h2>
+
+<div class="sources">
+<p>• UNESCO — Aksum World Heritage Centre</p>
+<p>• UNESCO — Cultural Heritage of Yeha</p>
+<p>• Historical and archaeological references</p>
+</div>
+
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Tigray History</p>
+<p>ታሪክን እንጠብቅ • ቅርሳችንን እናስተላልፍ</p>
+</footer>
 
 </body>
 </html>
